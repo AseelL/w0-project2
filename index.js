@@ -19,6 +19,8 @@ setInterval(() => {
 }else{
     msTens=0;
     clearInterval();
+    changeColor();
+
 }digit1.textContent=msTens;
 }, 10);
 
@@ -61,7 +63,19 @@ setInterval(() => {
         
         }else{
             clearInterval();
-        }digit4.textContent=secondTens;
+
+         
+  } 
+           digit4.textContent=secondTens;
+
+
 }, 10000);
+     
+    function changeColor(){
 
-
+   
+  let digits=document.getElementsByClassName('digit');
+    let digitArray=[...digits];   
+  for(var i=0;i<digitArray.length;i++){
+    digitArray[i].className +=' redDigit';} 
+}
