@@ -9,34 +9,59 @@ let secondOnes = 0;
 let secondTens = 0;
 
 setInterval(() => {
-if(msTens<9){
+    if(secondTens<1){
+    if(msTens<9){
     msTens++;
-digit1.textContent=msTens;
+
 }else{
     msTens=0;
 }
+}else{
+    msTens=0;
+    clearInterval();
+}digit1.textContent=msTens;
 }, 10);
+
+
 setInterval(() => {
+    if(secondTens<1){
     if(msHundreds<9){
 msHundreds++;
-digit2.textContent=msHundreds;
+
 }else{
     msHundreds=0;
 }
+}else{
+    msHundreds=0;
+    clearInterval();
+}digit2.textContent=msHundreds;
 }, 100);
+
+
 setInterval(() => {
+    if(secondTens<1){
     if(secondOnes<9){
         secondOnes++;
-        digit3.textContent=secondOnes;
+                
+
         }else{
             secondOnes=0;
         }
-}, 1000);
-setInterval(() => {
-    if(secondTens<9){
-        secondTens++;
-        digit4.textContent=secondTens;
-        }else{
-            secondTens=0;
+    }
+        else{
+            secondOnes=0;
+            clearInterval();
         }
+        digit3.textContent=secondOnes;
+}, 1000);
+
+ setInterval(() => {
+    if(secondTens<1){
+        secondTens++;
+        
+        }else{
+            clearInterval();
+        }digit4.textContent=secondTens;
 }, 10000);
+
+
